@@ -8,6 +8,11 @@ const fortniteMembers = require("./utils/randomGuys");
 const memes = require("./utils/giveMeAMeme");
 
 client.on("messageCreate", async function (message) {
+
+  if(message.author.id === "948086741250752563"){
+    message.channel.send("STFU gaylord")
+  }
+else{
   switch (message.content.toLowerCase()) {
     case "fortnite":
       message.channel.send("These are the guys who will play today");
@@ -15,7 +20,7 @@ client.on("messageCreate", async function (message) {
 
       break;
     case "hello":
-      message.channel.send("Hello there, " + message.author.toString());
+      message.channel.send("Hello there, " + message.author.toString()+" "+message.author.id);
       break;
     case "gay":
       message.channel.send(
@@ -27,6 +32,7 @@ client.on("messageCreate", async function (message) {
       const { title, url } = await memes();
       message.channel.send(title);
       message.channel.send(url);
+    
 
     //implement in future
     //  case "members":
@@ -37,5 +43,7 @@ client.on("messageCreate", async function (message) {
     //     //      console.log(member.user.tag)
     //     //  });
   }
+}
+
 });
 client.login(process.env.BOT_TOKEN);
