@@ -10,7 +10,8 @@ const memes = require("./utils/giveMeAMeme");
 client.on("messageCreate", async function (message) {
 
   if(message.author.id === "948086741250752563"){
-    message.channel.send("STFU gaylord")
+    message.react("🖕");
+    // message.channel.send("STFU gaylord")
   }
 else{
   switch (message.content.toLowerCase()) {
