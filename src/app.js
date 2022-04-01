@@ -12,8 +12,8 @@ const birthdayChecker = require('./utils/birthdayWishes');
 client.on("messageCreate", async function (message) {
 
   if(message.author.id === "948086741250752563"){
-    message.react("🖕");
-    // message.channel.send("STFU gaylord")
+    // message.react("🖕");
+    message.channel.send("The biggest fool in the channel is now speaking 😂😂😂")
   }
 else{
   switch (message.content.toLowerCase()) {
