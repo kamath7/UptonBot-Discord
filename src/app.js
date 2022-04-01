@@ -6,6 +6,8 @@ const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 
 const fortniteMembers = require("./utils/randomGuys");
 const memes = require("./utils/giveMeAMeme");
+const birthdayChecker = require('./utils/birthdayWishes');
+
 
 client.on("messageCreate", async function (message) {
 
@@ -38,8 +40,10 @@ else{
     //implement in future
     //  case "members":
     //     const guild =  client.guilds.cache.get(message.guild.id)
-    //     guild.members.fetch().then((data)=> console.log(data.size))
-
+    //     guild.members.fetch().then((data)=> console.log(data))
+    //     // let offlineMembers = guild.members.filter(member=> member.presence.status === "offline")
+    //     // let onlineMembers = guild.members.filter(member=> member.presence.status === "online")
+    //     // console.log(offlineMembers, onlineMembers)
     //     //  message.channel.members.each(member => {
     //     //      console.log(member.user.tag)
     //     //  });
